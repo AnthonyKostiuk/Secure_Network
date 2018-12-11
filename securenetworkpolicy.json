@@ -1,12 +1,61 @@
 {
-    "if": {
-        "allOf": [{
-                "field": "type",
-                "equals": "Microsoft.Network/routeTables"
-            }
-        ]
-    },
-    "then": {
-        "effect": "deny"
-    }
-}'
+  "if": {
+    "allOf": [
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/routeTables"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/bgpServiceCommunities"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/connections"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/expressRouteCircuits"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/expressRouteServiceProviders"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/localNetworkGateways"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/publicIPAddresses"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/publicIPPrefixes"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/virtualNetworkGateways"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/virtualNetworks"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/vpnGateways"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/vpnSites"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/routeFilters"
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
