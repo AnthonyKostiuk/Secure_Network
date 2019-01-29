@@ -1,6 +1,6 @@
 {
   "if": {
-    "allOf": [
+    "anyOf": [
       {
         "field": "type",
         "equals": "Microsoft.Network/routeTables"
@@ -40,6 +40,10 @@
       {
         "field": "type",
         "equals": "Microsoft.Network/virtualNetworks"
+      },
+      {
+        "field": "type",
+        "equals": "Microsoft.Network/virtualNetworks/subnets"
       },
       {
         "field": "type",
